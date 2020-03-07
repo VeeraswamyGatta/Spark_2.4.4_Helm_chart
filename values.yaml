@@ -12,7 +12,7 @@ Master:
   ImageTag: "2.4.4"
   Replicas: 1
   Component: "spark-master"
-  Cpu: "100m"
+  Cpu: "50m"
   Memory: "512Mi"
   ServicePort: 7077
   ContainerPort: 7077
@@ -29,9 +29,9 @@ Worker:
   Name: worker
   Image: "veeraswamyg/spark"
   ImageTag: "2.4.4"
-  Replicas: 2
+  Replicas: 1
   Component: "spark-worker"
-  Cpu: "100m"
+  Cpu: "50m"
   Memory: "512Mi"
   ContainerPort: 8081
   # Set Worker JVM memory. Default 1g
@@ -41,7 +41,7 @@ Worker:
   Autoscaling:
     Enabled: false
   ReplicasMax: 10
-  CpuTargetPercentage: 50
+  CpuTargetPercentage: 30
 
 Zeppelin:
   Name: zeppelin
@@ -49,7 +49,7 @@ Zeppelin:
   ImageTag: "0.8.2"
   Replicas: 1
   Component: "zeppelin"
-  Cpu: "100m"
+  Cpu: "50m"
   ServicePort: 8080
   ContainerPort: 8080
   ServiceType: LoadBalancer

@@ -52,7 +52,7 @@ Zeppelin:
   Cpu: "50m"
   ServicePort: 8080
   ContainerPort: 8080
-  ServiceType: LoadBalancer
+  ServiceType: NodePort
   Ingress:
     Enabled: false
     Path: "/"

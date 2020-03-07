@@ -45,8 +45,8 @@ Worker:
 
 Zeppelin:
   Name: zeppelin
-  Image: "mcr.microsoft.com/mmlspark/zeppelin"
-  ImageTag: "v4"
+  Image: "apache/zeppelin"
+  ImageTag: "0.8.2"
   Replicas: 1
   Component: "zeppelin"
   Cpu: "100m"
